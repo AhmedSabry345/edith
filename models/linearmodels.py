@@ -32,7 +32,7 @@ class LinearRegression():
 
 
 
-class accuarcy_score():
+class evaluation_matricies():
     def __init__(self):    
         pass
 
