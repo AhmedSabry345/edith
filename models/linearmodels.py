@@ -27,8 +27,8 @@ class LinearRegression():
             dw = (1 / len_x) * np.dot(x, error)
             db = (1 / len_x) * np.sum(error)
 
-            self.w = self.w - dw
-            self.b = self.b - db
+            self.w = self.w - self.learning_rate * dw
+            self.b = self.b - self.learning_rate * db
 
 
 
@@ -88,3 +88,10 @@ class MultiLinearRegression():
 
             self.w -= self.learning_rate * dw
             self.b -= self.learning_rate * db
+
+class PolynomialRegression():
+    def __init__(self, degree, learning_rate):
+        self.degree = degree
+        self.learning_rate = learning_rate
+        self.w = None
+        self.b = 0
